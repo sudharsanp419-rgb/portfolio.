@@ -3,143 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sudharsan P | Portfolio</title>
+<title>Sudharsan P | Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --primary: #4f46e5;
-  --dark: #0f172a;
-  --light: #f8fafc;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
 body{
-background:var(--light);
-color:#1e293b;
-scroll-behavior:smooth;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.6
 }
 
-/* HEADER */
 header{
-background:linear-gradient(135deg,#4f46e5,#6366f1);
+background:linear-gradient(135deg,#1e293b,#0f172a);
 color:white;
-padding:70px 20px;
-text-align:center;
+padding:90px 20px;
+text-align:center
 }
 
-header h1{
-font-size:2.7rem;
+.profile-pic{
+width:200px;
+height:200px;
+border-radius:50%;
+border:5px solid #6366f1;
+object-fit:cover; /* fill circle */
+object-position:center top; /* focus on face area */
+margin-bottom:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.6)
 }
 
-header p{
-margin-top:10px;
-font-size:1.2rem;
-}
+header h1{font-size:3rem;margin-bottom:8px}
+header p{font-size:1.2rem;color:#cbd5f5}
+
+.buttons{margin-top:25px}
 
 .btn{
-display:inline-block;
-margin-top:20px;
-padding:10px 18px;
-background:white;
-color:#4f46e5;
-border-radius:6px;
 text-decoration:none;
+padding:10px 20px;
+margin:6px;
+background:#6366f1;
+color:white;
+border-radius:6px;
 font-weight:600;
+display:inline-block;
+transition:0.3s
 }
 
-/* NAV */
+.btn:hover{
+background:#4f46e5;
+transform:translateY(-2px)
+}
+
 nav{
 position:sticky;
 top:0;
-background:white;
+background:#020617;
 display:flex;
 justify-content:center;
-gap:25px;
-padding:12px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-z-index:100;
+gap:30px;
+padding:15px;
+box-shadow:0 4px 20px rgba(0,0,0,0.6);
+z-index:100
 }
 
 nav a{
 text-decoration:none;
-color:#0f172a;
-font-weight:600;
+color:#e2e8f0;
+font-weight:600
 }
 
-nav a:hover{
-color:#4f46e5;
-}
+nav a:hover{color:#6366f1}
 
-/* SECTION */
 section{
-padding:60px 10%;
+padding:80px 12%;
+text-align:center
 }
 
-section h2{
+h2{
 font-size:2rem;
-margin-bottom:25px;
-color:#4f46e5;
+margin-bottom:35px;
+color:#818cf8
 }
 
-/* CARD GRID */
 .card-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+background:#1e293b;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
 transition:0.3s;
+opacity:0;
+transform:translateY(30px);
+text-align:left
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(0,0,0,0.7)
 }
 
-/* SKILLS */
 .skills span{
-display:inline-block;
-background:#e0e7ff;
-color:#4f46e5;
+background:#312e81;
+color:#c7d2fe;
 padding:8px 14px;
 border-radius:20px;
-margin:6px;
-font-weight:600;
+margin:5px;
+display:inline-block;
+font-weight:500
 }
 
-/* FOOTER */
-footer{
-background:#0f172a;
+.project-btn{
+margin-top:12px;
+display:inline-block;
+background:#6366f1;
 color:white;
-text-align:center;
-padding:20px;
+padding:8px 14px;
+border-radius:6px;
+text-decoration:none;
+font-size:0.9rem
 }
 
-footer a{
-color:#93c5fd;
-text-decoration:none;
+.project-btn:hover{background:#4f46e5}
+
+footer{
+background:#020617;
+color:#94a3b8;
+text-align:center;
+padding:35px
 }
+
+footer a{color:#818cf8;text-decoration:none}
+
+@media(max-width:768px){
+header h1{font-size:2.2rem}
+section{padding:70px 8%}
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+<img src="profile.png" class="profile-pic" alt="Sudharsan profile photo">
 <h1>Sudharsan P</h1>
-<p>B.Sc Computer Science Student | Python | SQL | Web Developer</p>
+<p>B.Sc Computer Science Student | Aspiring Software Developer</p>
 
-<a href="resume.pdf" class="btn">Download Resume</a>
-
+<div class="buttons">
+<a class="btn" href="resume.pdf" download>Download Resume</a>
+<a class="btn" href="#contact">Contact</a>
+<a class="btn" href="https://github.com/sudharsanp419">GitHub</a>
+<a class="btn" href="#">LinkedIn</a>
+</div>
 </header>
 
 <nav>
@@ -156,55 +178,56 @@ text-decoration:none;
 
 <div class="card">
 <p>
-I am a B.Sc Computer Science student from NGM College with strong interest in
-software development, data analysis and web technologies.
+Motivated B.Sc Computer Science student from Nallamuthu Gounder Mahalingam College.
+I have strong interest in software development, programming and web technologies.
 
-I have knowledge in Python, SQL, HTML, CSS and JavaScript and I enjoy building
-projects that solve real-world problems. I am currently looking for opportunities
-to apply my technical skills and continue learning in a professional environment.
+I have hands-on experience with Python, SQL, HTML, CSS and JavaScript.
+I enjoy building projects and continuously learning new technologies to improve my skills.
+
+Currently seeking opportunities to gain practical experience in software development.
 </p>
 </div>
 
 </section>
 
 <section id="skills">
-
 <h2>Technical Skills</h2>
 
 <div class="card skills">
-
 <span>Python</span>
 <span>SQL</span>
 <span>HTML</span>
 <span>CSS</span>
 <span>JavaScript</span>
-<span>Git & GitHub</span>
+<span>Git</span>
+<span>GitHub</span>
 <span>Excel</span>
 <span>Power BI</span>
-
 </div>
 
 </section>
 
 <section id="projects">
-
 <h2>Projects</h2>
 
 <div class="card-grid">
 
 <div class="card">
 <h3>Portfolio Website</h3>
-<p>Personal portfolio website built using HTML and CSS to showcase my skills and certifications.</p>
+<p>Personal developer portfolio built using HTML, CSS and JavaScript to showcase skills and projects.</p>
+<a class="project-btn" href="https://github.com">View Project</a>
 </div>
 
 <div class="card">
-<h3>Perfumy Website</h3>
-<p>E-commerce style perfume website with product layout, cart interaction and responsive design.</p>
+<h3>Perfumy E-Commerce Website</h3>
+<p>Responsive perfume shopping website with product layout, cart interface and modern UI design.</p>
+<a class="project-btn" href="https://github.com">View Project</a>
 </div>
 
 <div class="card">
 <h3>Directed Graph Visualizer</h3>
 <p>Python program using NetworkX and Matplotlib to visualize directed graphs.</p>
+<a class="project-btn" href="https://github.com">View Project</a>
 </div>
 
 </div>
@@ -212,7 +235,6 @@ to apply my technical skills and continue learning in a professional environment
 </section>
 
 <section id="certifications">
-
 <h2>Certifications</h2>
 
 <div class="card-grid">
@@ -228,22 +250,9 @@ to apply my technical skills and continue learning in a professional environment
 </section>
 
 <section id="education">
-
 <h2>Education</h2>
 
 <div class="card-grid">
-
-<div class="card">
-<strong>SSLC</strong><br>
-Sankar Ponnar HR Sec School<br>
-Result: 100%
-</div>
-
-<div class="card">
-<strong>HSC</strong><br>
-Sankar Ponnar HR Sec School<br>
-Marks: 77%
-</div>
 
 <div class="card">
 <strong>B.Sc Computer Science</strong><br>
@@ -251,260 +260,60 @@ Nallamuthu Gounder Mahalingam College<br>
 Percentage: 66.48%
 </div>
 
+<div class="card">
+<strong>HSC</strong><br>
+Sankar Ponnar Higher Secondary School<br>
+Marks: 77%
+</div>
+
+<div class="card">
+<strong>SSLC</strong><br>
+Sankar Ponnar Higher Secondary School<br>
+Result: 100%
+</div>
+
 </div>
 
 </section>
 
 <section id="contact">
-
 <h2>Contact</h2>
 
 <div class="card">
-
 <p><strong>Email:</strong> sudharsanp419@gmail.com</p>
 <p><strong>Phone:</strong> 9791820298</p>
-
-<p><strong>GitHub:</strong>
-<a href="https://github.com/sudharsanp419">github.com/sudharsanp419</a>
-</p>
-
-<p><strong>LinkedIn:</strong>
-<a href="#">Add your LinkedIn profile</a>
-</p>
-
+<p><strong>GitHub:</strong> github.com/sudharsanp419</p>
 <p><strong>Languages:</strong> English, Tamil</p>
-
 </div>
 
 </section>
 
 <footer>
-
-<p>© 2026 Sudharsan P | Built with HTML, CSS & JavaScript</p>
-
-</footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sudharsan P | Portfolio</title>
-
-<style>
-:root {
-  --primary: #4f46e5;
-  --dark: #0f172a;
-  --light: #f8fafc;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background: var(--light);
-  color: #1e293b;
-  scroll-behavior: smooth;
-}
-
-/* Header */
-header {
-  background: linear-gradient(135deg, var(--primary), #6366f1);
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-}
-
-header p {
-  margin-top: 10px;
-  font-size: 1.1rem;
-}
-
-/* Navigation */
-nav {
-  position: sticky;
-  top: 0;
-  background: white;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 100;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: var(--primary);
-}
-
-/* Section */
-section {
-  padding: 60px 10%;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: var(--primary);
-}
-
-/* Cards */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Skills */
-.skills span {
-  display: inline-block;
-  background: #e0e7ff;
-  color: var(--primary);
-  padding: 8px 14px;
-  border-radius: 20px;
-  margin: 6px;
-  font-weight: 600;
-}
-
-/* Footer */
-footer {
-  background: var(--dark);
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer a {
-  color: #93c5fd;
-  text-decoration: none;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <h1>Sudharsan P</h1>
-  <p>Aspiring Developer | Python | Web Technologies</p>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#education">Education</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      Motivated and enthusiastic beginner with a strong interest in learning new technologies.
-      Looking to apply my knowledge in internships or entry-level roles to gain hands-on experience.
-      I am a fast learner and open to exploring different career paths.
-    </p>
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="card skills">
-    <span>Python</span>
-    <span>SQL</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>Excel</span>
-    <span>Power BI (Basics)</span>
-  </div>
-</section>
-
-<section id="certifications">
-  <h2>Certifications</h2>
-  <div class="card-grid">
-    <div class="card">Python for Data Science – NPTEL</div>
-    <div class="card">Python for Beginners – Simplilearn</div>
-    <div class="card">Power BI (VAC)</div>
-    <div class="card">Generative AI Concept – Microsoft</div>
-    <div class="card">Introduction to SQL – Sololearn</div>
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-  <div class="card-grid">
-    <div class="card">
-      <strong>SSLC</strong><br>
-      Sankar Ponnar HR Sec School<br>
-      Result: 100%
-    </div>
-    <div class="card">
-      <strong>HSC</strong><br>
-      Sankar Ponnar HR Sec School<br>
-      Marks: 77%
-    </div>
-    <div class="card">
-      <strong>UG</strong><br>
-      Nallamuthu Gounder Mahalingham College<br>
-      Percentage: 66.48%
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p><strong>Email:</strong> sudharsanp419@gmail.com</p>
-    <p><strong>Phone:</strong> 9791820298</p>
-    <p><strong>Languages:</strong> English, Tamil</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Sudharsan P | Built with HTML, CSS & JavaScript</p>
+<p>© 2026 Sudharsan P</p>
+<p>Built with HTML, CSS & JavaScript</p>
 </footer>
 
 <script>
-// Simple fade-in animation
-const cards = document.querySelectorAll('.card');
-window.addEventListener('scroll', () => {
-  cards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 50) {
-      card.style.opacity = 1;
-      card.style.transform = 'translateY(0)';
-    }
-  });
-});
+
+const cards=document.querySelectorAll('.card');
+
+function reveal(){
+const trigger=window.innerHeight-80;
+
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+
+if(top<trigger){
+card.style.opacity=1;
+card.style.transform='translateY(0)';
+}
+})
+}
+
+window.addEventListener('scroll',reveal);
+
+reveal();
+
 </script>
 
 </body>
